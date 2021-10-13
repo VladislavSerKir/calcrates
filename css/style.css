@@ -1,0 +1,170 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  color: #000;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-body {
+  width: 350px;
+}
+
+.container-center {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  margin-top: 20px;
+}
+
+.header__text {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.header__title, .header__text {
+  text-align: center;
+}
+
+.general__rates-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.general__rates-item {
+  padding: 5px 15px;
+}
+
+.col-md-4>img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  padding-top: 35px;
+  padding-left: 30px;
+}
+
+.card-title {
+  font-size: 28px;
+}
+
+h5>.card-title {
+  margin-bottom: 0;
+}
+
+.inner-title {
+  font-size: 22px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.inner-text {
+  font-size: 28px;
+  margin-bottom: 0;
+  padding-left: 50px;
+  position: relative;
+}
+
+.card-text_percentage {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.inner-text-add {
+  font-size: 25px;
+  margin-bottom: 0;
+  padding-left: 8px;
+  transform: translateY(7%);
+}
+
+.card_flex {
+  display: flex;
+  justify-content: start;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: rgb(53, 187, 53);
+}
+
+.inner-text_logo-red::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/red.png);
+  width: 30%;
+  height: 100%;
+  top: 5px;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.inner-text_logo-green::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/green.png);
+  width: 30%;
+  height: 100%;
+  top: 5px;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.rate-settings__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.rate-settings__item {
+  padding: 10px 10px;
+}
+
+.rate-info__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.rate-info__item {
+  padding: 5px 15px;
+}
+
+.sorting__inner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sorting__item {
+  padding: 10px 10px;
+}
+
+.grafem {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: inline-block;
+  margin-left: 5px;
+}
+.button-flex{
+  display: flex; 
+  justify-content: space-between;
+}

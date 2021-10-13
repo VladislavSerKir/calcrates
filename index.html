@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Курсы валют ЦБ РФ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="container-center">
+        <h1 class="header__title h1">Курсы валют ЦБ РФ на <span data-value="date">-</span></h1>
+        <p class="header__text">Актуальная информация по курсам валют мира</p>
+        <a id="anchor2"></a>
+      </div>
+    </header>
+
+    <div class="sorting__inner">
+      <div class="sorting__item">
+        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href = '#anchor1'">
+          Калькулятор</button>
+      </div>
+    </div>
+
+    <section class="general__rates">
+
+      <div class="general__rates-content">
+
+        <div class="general__rates-item" id="us">
+          <div class="card mb-4" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/us.jpg" alt="US">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">USD</h5>
+                  <p class="card-text inner-title">Американский доллар</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="USD">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevUSD">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeUSD">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageUSD">-</span></p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-3" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/eu.png" alt="EU">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">EUR</h5>
+                  <p class="card-text inner-title">Евро</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="EUR">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevEUR">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeEUR">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageEUR">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-3" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/au.jpg" alt="AU">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">AUD</h5>
+                  <p class="card-text inner-title">Австралийский доллар</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="AUD">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevAUD">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeAUD">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageAUD">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-4" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/gb.jpg" alt="GB">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">GBP</h5>
+                  <p class="card-text inner-title">Британский фунт</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="GBP">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevGBP">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeGBP">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageGBP">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-3" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/by.png" alt="BY">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">BYN</h5>
+                  <p class="card-text inner-title">Белорусский рубль</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="BYN">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevBYN">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeBYN">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageBYN">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-3" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/hk.png" alt="HK">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">HKD</h5>
+                  <p class="card-text inner-title">Гонконгский доллар</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="HKD">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevHKD">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeHKD">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageHKD">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-4" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/cn.jpg" alt="CN">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">CNY</h5>
+                  <p class="card-text inner-title">Китайский юань</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="CNY">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevCNY">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeCNY">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageCNY">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-3" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/in.jpg" alt="IN">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">INR</h5>
+                  <p class="card-text inner-title">Индийских рупий</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="INR">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevINR">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeINR">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageINR">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="general__rates-item">
+          <div class="card mb-3" style="max-width: 550px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/ca.png" alt="CA">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">CAD</h5>
+                  <p class="card-text inner-title">Канадский доллар</p>
+                  <div class="card_flex">
+                    <p class="card-text inner-text" data-value="CAD">-</p>
+                    <p class="card-text_prev inner-text-add">Пред. <span class="inner-text-add"
+                        data-value="prevCAD">-</span></p>
+                  </div>
+                  <p class="card-text_percentage">Изменение: <span class="card-text_percentage"
+                      data-value="changeCAD">-</span>
+                  </p>
+                  <p class="card-text_percentage">Изменение в %: <span class="card-text_percentage"
+                      data-value="percentageCAD">-</span>
+                  </p>
+                  <p class="card-text"><small class="text-muted">Последнее обновление <span
+                        data-value="time">date</span></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="calc__rates">
+      <h2 class="header__title h1">Конвертер валют</h2>
+      <p class="header__text">Калькулятор</p>
+      <a id="anchor1"></a>
+      <div class="container-center">
+
+        <div class="rate-settings__inner">
+
+          <div class="rate-settings__item">
+            <label for="input-rate" class="form-select-lg">Отдаю:</label>
+            <select id="input_rate" onchange="showCurrency(this)" class="form-select form-select-lg mb-3"
+              aria-label=".form-select-lg example" tabindex="0">
+              <option disabled selected>Исходная валюта</option>
+              <option value="USD">USD — Американский доллар</option>
+              <option value="EUR">EUR — Евро</option>
+              <option value="AUD">AUD — Австралийский доллар</option>
+              <option value="GBP">GBP — Британский фунт</option>
+              <option value="BYN">BYN — Белорусский рубль</option>
+              <option value="HKD">HKD — Гонконгский доллар</option>
+              <option value="CNY">CNY — Китайский юань</option>
+              <option value="INR">INR — Индийских рупий</option>
+              <option value="CAD">CAD — Канадский доллар</option>
+            </select>
+
+          </div>
+
+          <div class="rate-settings__item">
+            <div class="input-group input-group-lg">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Количество</span>
+              <input id="input" type="number" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg" onkeypress="return event.charCode >= 48" min="0">
+            </div>
+          </div>
+
+          <div class="rate-settings__item">
+            <div class="button-flex">
+              <div class="button-inner">
+                <button type="button" onclick="clearField()" class="btn btn-primary btn-lg">Очистить</button>
+              </div>
+              <div class="button-inner">
+                <button type="button" onclick="window.location.href = '#anchor2'" class="btn btn-primary btn-lg">К
+                  обзору валют</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rate-settings__item">
+            <label for="output-rate" class="form-select-lg">Получаю:</label>
+            <select id="output-rate" onchange="showOutput(this)" class="form-select form-select-lg mb-3"
+              aria-label=".form-select-lg example">
+              <option disabled selected>Конвертируемая валюта</option>
+              <option value="USD">USD — Американский доллар</option>
+              <option value="EUR">EUR — Евро</option>
+              <option value="AUD">AUD — Австралийский доллар</option>
+              <option value="GBP">GBP — Британский фунт</option>
+              <option value="BYN">BYN — Белорусский рубль</option>
+              <option value="HKD">HKD — Гонконгский доллар</option>
+              <option value="CNY">CNY — Китайский юань</option>
+              <option value="INR">INR — Индийских рупий</option>
+              <option value="CAD">CAD — Канадский доллар</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="rate-info__inner">
+
+          <div class="rate-info__item">
+            <div class="card mb-3" style="max-width: 550px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <!-- <img src="images/nn.jpg" alt="Flag"> -->
+                  <img src="images/nn.jpg" alt="Flag" id="inputImg">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Отдаю</h5>
+                    <div class="card-flex">
+                      <p id="inputValue" class="card-text inner-title">-</p>
+                      <p class="card-text grafem" id="grafInput"></p>
+                      <br>
+                      <p id="inputCurrency" class="card-text_prev inner-title">Исходная валюта</p>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rate-info__item">
+            <div class="card mb-3" style="max-width: 550px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="images/nn.jpg" alt="Flag" id="outputImg">
+                  <!-- <img :src="require(`../assets/images/${selectedImage.toLowerCase()}.jpg`)"> -->
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Получаю</h5>
+                    <p id="result" type="number" class="card-text inner-title">-</p>
+                    <p class="card-text grafem" id="grafOut"></p>
+                    <br>
+                    <p id="outputCurrency" class="card-text_prev inner-title">Конвертируемая валюта</p>
+                    <p class="inner-title">С расчетом на вчера: <span id="result-old" class="card-text_percentage"
+                        data-value="changeCAD">-</span>
+                    <p class="card-text grafem" id="grafOut"></p>
+                    </p>
+                  </div>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+            </div>
+
+    </section>
+  </div>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/func.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+
+</html>
