@@ -17,6 +17,10 @@ body {
   width: 350px;
 }
 
+.card {
+  max-width: 550px;
+}
+
 .container-center {
   max-width: 1230px;
   margin: 0 auto;
@@ -40,10 +44,21 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  column-gap: 24px;
 }
 
 .general__rates-item {
   padding: 5px 15px;
+}
+
+.row {
+  height: 100%;
+}
+
+.col-md-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .col-md-4>img {
@@ -51,8 +66,8 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  padding-top: 35px;
   padding-left: 30px;
+  padding-right: 14px;
 }
 
 .card-title {
@@ -151,6 +166,8 @@ h5>.card-title {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 24px;
 }
 
 .sorting__item {
@@ -164,7 +181,8 @@ h5>.card-title {
   display: inline-block;
   margin-left: 5px;
 }
-.button-flex{
-  display: flex; 
+
+.button-flex {
+  display: flex;
   justify-content: space-between;
 }
