@@ -20,14 +20,14 @@ async function getCurrencies() {
 
 function createCard(cardData, Date) {
   const card = template.content.cloneNode(true).querySelector('.card');
-  card.querySelector('.flag-image').src = `../images/flags/${cardData.CharCode}.jpg`;
   card.querySelector('.card-title').textContent = cardData.CharCode;
   card.querySelector('.inner-title').textContent = cardData.Name;
   card.querySelector('.card-value').textContent = cardData.Value.toFixed(2);
   card.querySelector('.card-prev').textContent = cardData.Previous.toFixed(2);
   card.querySelector('.card-change').textContent = (cardData.Value - cardData.Previous).toFixed(2);
   card.querySelector('.card-percentage').textContent = (((cardData.Value * 100) / (cardData.Previous)) - 100).toFixed(3);
-  card.querySelector('.card-update').textContent = Date
+  card.querySelector('.card-update').textContent = Date;
+  card.querySelector('.flag-image').src = `./images/flags/${cardData.CharCode}.jpg`;
   compareCurrencies(cardData.Value, cardData.Previous, card.querySelector('.inner-text'));
   return card;
 }
